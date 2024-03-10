@@ -1,0 +1,46 @@
+.portrait-and-text {
+  display: flex;
+  flex-direction: row;
+  flex: 1 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.sliding-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  
+  color: #E4EBF7;
+  font-size: 0.8rem;
+}
+
+.sliding-text span {
+  display: inline-block;
+  margin: 0;
+  animation:sliding-text 45s linear infinite;
+}
+
+.slide-right span {
+  animation:sliding-text-2 45s linear infinite;
+}
+
+@keyframes sliding-text {
+  from {
+    transform:translateX(0);
+  }
+  to {
+    transform:translateX(100%);
+  }
+}
+
+@keyframes sliding-text-2 {
+  from {
+    transform:translateX(-100%);
+  }
+  to {
+    transform:translateX(0);
+  }
+}
